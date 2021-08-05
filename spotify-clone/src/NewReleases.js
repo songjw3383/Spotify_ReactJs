@@ -5,7 +5,7 @@ import { useDataLayerValue } from './DataLayer';
 import Header from "./Header";
 import SongRow from './SongRow'
 
-function Body({spotify}) {
+function NewReleases({spotify}) {
     const [{ currentPlaylists }, dispatch] = useDataLayerValue();
     
     console.log(currentPlaylists)
@@ -26,9 +26,9 @@ function Body({spotify}) {
 
             <div className="body__songs">
                 <div className="body__icons">
-                    <PlayCircleFilled className="body__shuffle"/>
+                    {/* <PlayCircleFilled className="body__shuffle"/>
                     <Favorite fontSize="large"/>
-                    <MoreHoriz />
+                    <MoreHoriz /> */}
                 </div>
 
                 {currentPlaylists?.items.map(item => (
@@ -41,4 +41,4 @@ function Body({spotify}) {
     )
 }
 
-export default Body
+export default NewReleases

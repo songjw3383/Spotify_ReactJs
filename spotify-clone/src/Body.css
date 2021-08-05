@@ -19,10 +19,16 @@
   }
   .body__infoText > h2 {
     font-size: 48px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+  }
+  @media screen and (max-width: 768px) {
+    .body__infoText > h2 {
+    font-size: 22px;
+    }
   }
   .body__infoText > p {
     font-size: 14px;
+    margin-top: 10px;
   }
   .body__info > img {
     height: 20vw;

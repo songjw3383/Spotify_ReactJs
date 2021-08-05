@@ -10,15 +10,18 @@ import {
     VolumeDown,
   } from "@material-ui/icons";
 import { Grid, Slider} from '@material-ui/core'
+import {useDataLayerValue} from './DataLayer';
 
 function Footer() {
+    const [{currentPlaylists }, dispatch] = useDataLayerValue();
+
     return (
         <div className="footer">
             <div className="footer__left">
-                <img className="footer__albumLogo" src="https://i.pinimg.com/originals/8d/c7/52/8dc752834195102e4cb630a53221255e.jpg" alt="" />
+                <img className="footer__albumLogo" src={currentPlaylists?.items[0].track.album.images[0].url} alt="" />
                 <div className="footer__songInfo">
-                    <h4>Yeah!</h4>
-                    <p>Usher</p>
+                    <h4>{currentPlaylists?.items[0].track.name}</h4>
+                    <p>{currentPlaylists?.items[0].track.artists[0].name}</p>
                 </div>
             </div>
 

@@ -6,6 +6,7 @@ import { getTokenFromUrl } from "./spotify";
 import SpotifyWebApi from "spotify-web-api-js";
 import { useDataLayerValue } from "./DataLayer";
 
+
 const spotify = new SpotifyWebApi();
 
 function App() {
@@ -38,25 +39,21 @@ function App() {
         })
       })
 
-      // spotify.getPlaylist('cc39oc7tbs6hgk2jvlslei2sw').then(response => 
-      //   dispatch({
-      //     type: "SET_BODY_PLAYLISTS",
-      //     body_playlists: response,
-      //   })
-      //   )  
-    }
-    
-    // console.log('I Have a token>>>', token);
-  },[]);
+      spotify.getMyRecentlyPlayedTracks().then((currentPlaylists) => {
+        dispatch({
+          type: 'CURRENT_PLAYLISTS',
+          currentPlaylists: currentPlaylists,
+        })
+      })
 
+    }
+  },[]);
     // console.log('user info', user);
     // console.log('token info', token);
   
   return (
     <div className="App">
-      { token ? 
-        <Player spotify={spotify} /> : 
-      <Login /> }
+      { token ? <Player spotify={spotify} /> : <Login /> }
     </div>
   );
 }

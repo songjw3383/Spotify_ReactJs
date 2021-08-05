@@ -5,6 +5,7 @@ import HomeIcon from "@material-ui/icons/Home";
 import SearchIcon from "@material-ui/icons/Search"
 import LibraryMusicIcon from "@material-ui/icons/LibraryMusic"
 import { useDataLayerValue } from './DataLayer';
+import { Link } from 'react-router-dom';
 
 function Sidebar() {
     const [{ playlists }, dispatch] = useDataLayerValue();
@@ -18,8 +19,13 @@ function Sidebar() {
             <SidebarOption Icon={LibraryMusicIcon} title="Your Library" />
             
             <br/>
+            <strong className="sidebar__title"><Link to = "/">CURRENT PLAYLISTS</Link></strong>
+            <hr />
+            <strong className="sidebar__title"><Link to = "/NewReleases">NEW RELEASESE</Link></strong>
+            <hr />
             <strong className="sidebar__title">PLAYLISTS</strong>
             <hr />
+            
 
             {playlists?.items?.map(playlist => (
                 <SidebarOption title={playlist.name} />

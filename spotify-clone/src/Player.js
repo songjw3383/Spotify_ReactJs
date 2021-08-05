@@ -3,12 +3,21 @@ import './Player.css';
 import Sidebar from './Sidebar';
 import Body from './Body'
 import Footer from "./Footer"
+import NewReleases from "./NewReleases"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 function Player({spotify}) {
     return (
         <div className="player">
             <div className="player__body">
-                <Sidebar />
-                <Body spotify={spotify}/>
+                <Router>
+                    <Sidebar />
+                    <Switch>
+                        {/* Main Body is same as Current Playlists page */}
+                        <Route path="/" exact={true} component={Body} spotify={spotify}/> 
+                        <Route path="/NewReleases" component={NewReleases} spotify={spotify} />
+                    </Switch>
+                </Router>
             </div>
 
             <Footer />
