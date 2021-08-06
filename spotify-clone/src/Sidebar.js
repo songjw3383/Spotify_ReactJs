@@ -19,13 +19,13 @@ function Sidebar() {
             <SidebarOption Icon={LibraryMusicIcon} title="Your Library" />
             
             <br/>
-            <strong className="sidebar__title"><Link to = "/">CURRENT PLAYLISTS</Link></strong>
+            <strong className="sidebar__title"><Link to = "/featuredPlaylists">Editor's picks</Link></strong>
             <hr />
             <strong className="sidebar__title"><Link to = "/NewReleases">NEW RELEASESE</Link></strong>
             <hr />
-            <strong className="sidebar__title">PLAYLISTS</strong>
+            <strong className="sidebar__title"><Link to = "/">CURRENT PLAYLISTS</Link></strong>
             <hr />
-            
+            <strong className="sidebar__title">PLAYLISTS</strong>
 
             {playlists?.items?.map(playlist => (
                 <SidebarOption title={playlist.name} />

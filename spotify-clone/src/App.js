@@ -6,7 +6,6 @@ import { getTokenFromUrl } from "./spotify";
 import SpotifyWebApi from "spotify-web-api-js";
 import { useDataLayerValue } from "./DataLayer";
 
-
 const spotify = new SpotifyWebApi();
 
 function App() {
@@ -46,6 +45,20 @@ function App() {
         })
       })
 
+      spotify.getNewReleases().then((newReleases) => {
+        dispatch({
+          type: 'NEWRELEASES',
+          newReleases:newReleases,
+        })
+      })
+
+      spotify.getFeaturedPlaylists().then(featuredPlaylists => {
+        dispatch({
+          type: 'FEATURED_PLAYLISTS',
+          featuredPlaylists:featuredPlaylists,
+        })
+        console.log(featuredPlaylists);
+      })
     }
   },[]);
     // console.log('user info', user);

@@ -8,13 +8,12 @@ import SongRow from './SongRow'
 function Body({spotify}) {
     const [{ currentPlaylists }, dispatch] = useDataLayerValue();
     
-    console.log(currentPlaylists)
+    // console.log(currentPlaylists)
     return (
         <div className="body">
             <Header spotify={spotify}/>
 
             <div className="body__info">
-                {/* <img src={discover_weekly?.images[0].url} alt="" /> */}
                 <img src={currentPlaylists?.items[0].track.album.images[0].url} alt="" />
                 <div className="body__infoText">
                     <strong>최근 재생목록</strong>

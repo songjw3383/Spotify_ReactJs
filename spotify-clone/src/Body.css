@@ -1,57 +1,106 @@
 .body {
-    height: 100vh;
-    flex: 0.8;
-    color: white;
-    padding: 30px;
-    background: linear-gradient(rgb(91, 87, 115), rgba(0, 0, 0, 1));
-    overflow-y: overlay;
-  }
-  .body::-webkit-scrollbar {
-    display: none;
-  }
-  .body__info {
-    display: flex;
-    align-items: flex-end;
-    padding: 10px;
-  }
-  .body__infoText {
-    flex: 1;
-  }
+  height: 100vh;
+  width: 100vw;
+  flex: 0.8;
+  color: white;
+  padding: 30px;
+  background: linear-gradient(rgb(91, 87, 115), rgba(0, 0, 0, 1));
+  overflow-y: overlay;
+}
+.body::-webkit-scrollbar {
+  display: none;
+}
+.body__info {
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+}
+.body__infoText {
+  flex: 1;
+}
+.body__infoText > h2 {
+  font-size: 48px;
+  margin-top: 5px;
+}
+@media screen and (max-width: 768px) {
   .body__infoText > h2 {
-    font-size: 48px;
-    margin-top: 5px;
-  }
-  @media screen and (max-width: 768px) {
-    .body__infoText > h2 {
     font-size: 22px;
-    }
   }
-  .body__infoText > p {
-    font-size: 14px;
-    margin-top: 10px;
-  }
-  .body__info > img {
-    height: 20vw;
-    margin: 0 20px;
-    box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
-  }
-  .body__icons {
-    display: flex;
-    align-items: center;
-  }
-  .body__icons > .MuiSvgIcon-root {
-    margin-right: 20px;
-  }
-  .body__shuffle {
-    font-size: 80px !important;
-    margin-left: 50px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  .body__shuffle:hover {
-    transition: 100ms transform ease-in;
-    transform: scale(1.08);
-  }
-  .body__songs {
-    margin: 20px -30px;
-  }
+}
+.body__infoText > p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+.body__info > img {
+  height: 20vw;
+  margin: 0 20px;
+  box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+}
+.body__icons {
+  display: flex;
+  align-items: center;
+}
+.body__icons > .MuiSvgIcon-root {
+  margin-right: 20px;
+}
+.body__shuffle {
+  font-size: 80px !important;
+  margin-left: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.body__shuffle:hover {
+  transition: 100ms transform ease-in;
+  transform: scale(1.08);
+}
+.body__songs {
+  padding-bottom: 10vh;
+  margin: 20px -30px;
+}
+
+/* Album Grid CSS */
+.new_header {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.grid__playlists {
+  height: auto;
+  max-width: 100vw;
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-bottom: 10vh;
+}
+
+.grid__container {
+  position: relative;
+  width: auto;
+}
+
+.grid__container > img:hover {
+  opacity: 0.7;
+  transition: all 0.3s linear;
+  transform: scale(1.1);
+}
+
+.grid__container:hover .play__btn {
+  opacity: 1;
+  transition: all 0.3s linear;
+}
+
+.grid__container > img {
+  padding: 1rem;
+  width: 300px;
+}
+
+.play__btn {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -45%);
+  color: green;
+  font-size: 60px !important;
+}
