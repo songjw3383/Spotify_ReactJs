@@ -10,7 +10,7 @@
 1 명
 
 - **페이지 구성 (flow chart)** 
-<img src="https://user-images.githubusercontent.com/56250064/128592719-9cabbf66-3dae-445c-9e73-f3f930416cc6.png" witdh="500px" />
+<img src="https://user-images.githubusercontent.com/56250064/128592719-9cabbf66-3dae-445c-9e73-f3f930416cc6.png" witdh="500">
 
 
 ## 개발 도구 및 환경
