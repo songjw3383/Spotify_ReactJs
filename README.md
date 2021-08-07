@@ -1,18 +1,36 @@
-# Spotify_ReactJs
- 
+# Spotify-Clone
 ## 목적
+음악 플랫폼인 Spotify의 API를 활용하여 반응형 웹사이트 및 UI 개발.
+또한 단일 페이지 어플리케이션 (Single Page Application)을 구성하기 위해 react-router-dom 을 사용하여 구축
 
-  * API를 사용한 반응형 웹사이트 구현 및 연습
-   1. Layout 및 CSS 복습
-   1. Spotify의 API 를 사용해 데이터 받아오기
-   1. Context API 를 통한 상태관리 및 Reducer와 Dispatch의 활용
- 
-## 기능
-  1. 개인 스포티파이 계정으로 로그인
-  2. Spotify 화면 
+- **기간** :
+07.08 ~ 
 
-## 에러 사항
-  1. Spotify Premium 계정이 아니므로 제한적인 부분이 있었음 
-  > 추후에 플레이리스트 및 노래 재생 기능을 추가적으로 해 볼 예정
+- **개발인원** :
+1 명
 
-![Spotify_Clone](https://user-images.githubusercontent.com/56250064/125153711-a386e900-e190-11eb-85f7-dd6725cbce64.png)
+- **페이지 구성 (flow chart)** 
+<img src="https://user-images.githubusercontent.com/56250064/128592719-9cabbf66-3dae-445c-9e73-f3f930416cc6.png" witdh="500px" />
+
+
+## 개발 도구 및 환경
+- Visual Studio Code
+- Spotify Developer 
+- Chrome
+
+## 사용기술
+1. ReactJs
+2. CSS
+3. Material-UI ( For Icons )
+
+<hr/>
+
+*etc* 
+- spotify-web-api-js ( For Spotify API )
+- react-router-dom
+- Context API
+> createContext, useContext, useReducer
+
+## 상세 페이지 (진행 중)
+### - 메인 페이지
+![spotify_main](https://user-images.githubusercontent.com/56250064/128592943-9312d6bb-13ca-42bf-8ce9-01ab617e3af6.png)
