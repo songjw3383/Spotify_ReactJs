@@ -36,6 +36,7 @@ function App() {
           type: 'SET_PLAYLISTS',
           playlists: playlists,
         })
+        console.log(playlists);
       })
 
       spotify.getMyRecentlyPlayedTracks().then((currentPlaylists) => {
@@ -57,8 +58,19 @@ function App() {
           type: 'FEATURED_PLAYLISTS',
           featuredPlaylists:featuredPlaylists,
         })
-        console.log(featuredPlaylists);
+        // console.log(featuredPlaylists);
       })
+
+
+      // * Search Part
+      // spotify.searchTracks().then(searchPlaylists => {
+      //   dispatch({
+      //     type: 'SEARCH_PLAYLISTS',
+      //     searchPlaylists: searchPlaylists,
+      //   })
+      //   console.log(searchPlaylists);
+      // })
+
     }
   },[]);
     // console.log('user info', user);

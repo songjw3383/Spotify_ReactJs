@@ -4,6 +4,7 @@ import Sidebar from './Sidebar';
 import Body from './Body'
 import Footer from "./Footer"
 import NewReleases from "./NewReleases"
+
 import FeaturedPlaylists from "./FeaturedPlaylists"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -18,6 +19,7 @@ function Player({spotify}) {
                         <Route path="/" exact={true} component={Body} spotify={spotify}/> 
                         <Route path="/NewReleases" component={NewReleases} spotify={spotify} />
                         <Route path="/featuredPlaylists" component={FeaturedPlaylists} spotify={spotify} />
+                        {/* <Route path="/myPlaylists" componenet={MyPlaylists} spotify={spotify} /> */}
                     </Switch>
                 </Router>
             </div>

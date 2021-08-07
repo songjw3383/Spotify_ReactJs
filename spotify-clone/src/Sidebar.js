@@ -25,7 +25,7 @@ function Sidebar() {
             <hr />
             <strong className="sidebar__title"><Link to = "/">CURRENT PLAYLISTS</Link></strong>
             <hr />
-            <strong className="sidebar__title">PLAYLISTS</strong>
+            <strong className="sidebar__title">MY PLAYLISTS</strong>
 
             {playlists?.items?.map(playlist => (
                 <SidebarOption title={playlist.name} />

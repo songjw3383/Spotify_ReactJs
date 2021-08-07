@@ -8,7 +8,7 @@ import SongRow from './SongRow'
 function Body({spotify}) {
     const [{ currentPlaylists }, dispatch] = useDataLayerValue();
     
-    // console.log(currentPlaylists)
+    console.log(currentPlaylists)
     return (
         <div className="body">
             <Header spotify={spotify}/>

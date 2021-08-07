@@ -45,6 +45,13 @@ const reducer = (state, action) => {
                 ...state,
                 featuredPlaylists: action.featuredPlaylists
             }
+        // * Search Part
+        // case 'SEARCH_PLAYLISTS' :
+        //     return {
+        //         ...state,
+        //         searchPlaylists: action.searchPlaylists
+        //     }
+
         default: 
             return state;
     }
