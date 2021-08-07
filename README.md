@@ -33,4 +33,7 @@
 
 ## 상세 페이지 (진행 중)
 ### - 메인 페이지
-![spotify_main](https://user-images.githubusercontent.com/56250064/128592943-9312d6bb-13ca-42bf-8ce9-01ab617e3af6.png)
+![spotify_main](https://user-images.githubusercontent.com/56250064/128592943-9312d6bb-13ca-42bf-8ce9-01ab617e3af6.png)\
+
+### - 부가페이지
+<img src="https://user-images.githubusercontent.com/56250064/128593087-ffcf322c-0d3c-47a6-9bf8-952761780388.png" width="300"><img src="https://user-images.githubusercontent.com/56250064/128593089-bbc5e1d2-21b3-437c-a520-e54f4dd2a3d6.png" width="300">
