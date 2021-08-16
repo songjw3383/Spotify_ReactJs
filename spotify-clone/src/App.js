@@ -29,6 +29,7 @@ function App() {
           type: 'SET_USER',
           user: user
         })
+        console.log(user);
       })
 
       spotify.getUserPlaylists().then((playlists) => {
@@ -62,14 +63,37 @@ function App() {
       })
 
 
-      // * Search Part
-      // spotify.searchTracks().then(searchPlaylists => {
+      spotify.getMyTopArtists().then(topArtists => {
+        dispatch({
+          type:'TOP_ARTISTS',
+          topArtists:topArtists,
+        })
+        // console.log(topArtists)
+      })
+
+      spotify.getMyTopTracks().then(topTracks => {
+        dispatch({
+          type:'TOP_TRACKS',
+          topTracks:topTracks,
+        })
+        // console.log(topTracks)
+      })
+      
+      spotify.getMySavedTracks().then(savedTracks => {
+        dispatch({
+          type:'SAVED_TRACKS',
+          savedTracks:savedTracks,
+        })
+        console.log(savedTracks)
+      })
+     
+      // spotify.searchTracks().then(searchTracks => {
       //   dispatch({
-      //     type: 'SEARCH_PLAYLISTS',
-      //     searchPlaylists: searchPlaylists,
+      //     type:'SEARCH_TRACKS',
+      //     searchTracks: searchTracks
       //   })
-      //   console.log(searchPlaylists);
       // })
+      
 
     }
   },[]);
@@ -78,7 +102,7 @@ function App() {
   
   return (
     <div className="App">
-      { token ? <Player spotify={spotify} /> : <Login /> }
+      { token ? <Player spotify={spotify} />  : <Login /> }
     </div>
   );
 }

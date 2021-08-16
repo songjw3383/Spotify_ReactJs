@@ -1,7 +1,7 @@
 .body {
   height: 100vh;
   width: 100vw;
-  flex: 0.8;
+  flex: 0.9;
   color: white;
   padding: 30px;
   background: linear-gradient(rgb(91, 87, 115), rgba(0, 0, 0, 1));
@@ -103,4 +103,97 @@
   transform: translate(-50%, -50%);
   color: green;
   font-size: 60px !important;
+}
+
+/* MyLibrary CSS */
+h2 {
+  letter-spacing: 1px;
+  font-size: 24px;
+}
+
+.favorite__container {
+  width: 500px;
+  max-height: 300px;
+  background-color: rgba(179, 177, 190, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0 1rem 2rem;
+  box-shadow: 2px 4px 4px 0 rgba(0,0,0,0.2)
+}
+
+.favorite__container > img {
+  width: 150px;
+  height: 150px;
+  padding-bottom: 1rem;
+}
+
+.favorite__firsttracks {
+  display: flex;
+  padding-bottom: 10px;
+}
+
+.favorite__firsttracks > .name {
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.artist__grid {
+  display: flex;
+  margin: 2rem 0 5rem 0;
+  padding-bottom: 2rem;
+  overflow-x: scroll;
+}
+
+.playlist_scrollbar::-webkit-scrollbar {
+  display:none;
+}
+
+.artist__grid::-webkit-scrollbar  {
+  width:5px;
+  background-color: rgb(91, 87, 115); 
+  border-radius:30px;
+} 
+
+.artist__grid::-webkit-scrollbar-thumb {
+  background-color: rgb(179, 177, 190); 
+  border-radius:30px;
+} 
+
+.grid__content {
+  background-color: rgba(179, 177, 190, 0.1);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  height: 300px;
+  margin: 0 1rem 0 1rem;
+  text-align: center;
+  box-shadow: 2px 4px 4px 0 rgba(0,0,0,0.2)
+}
+
+.grid__content span {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.grid__content img {
+  width: 150px;
+  max-height: 150px;
+  padding: 1.5rem;
+  border-radius: 50%;
+
+}
+
+.grid__followers {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.grid__followers > h4 {
+  margin-left: 0.5rem;
+}
+
+.FavIcon {
+  color: green;
 }
