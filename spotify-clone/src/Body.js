@@ -11,7 +11,7 @@ function Body({spotify}) {
     // console.log(currentPlaylists)
     return (
         <div className="body">
-            <Header spotify={spotify}/>
+            {/* <Header spotify={spotify}/> */}
 
             <div className="body__info">
                 <img src={currentPlaylists?.items[0].track.album.images[0].url} alt="" />

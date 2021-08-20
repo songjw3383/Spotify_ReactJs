@@ -5,16 +5,20 @@ import { useDataLayerValue } from './DataLayer';
 import Header from "./Header";
 import SongRow from './SongRow'
 
-function SearchPage({track}) {
+function SearchPage({spotify}) {
     const [{ currentPlaylists }, dispatch] = useDataLayerValue();
     
-    console.log(track)
+    // console.log(currentPlaylists)
     return (
         <div className="body">
-            <Header />
+            <Header spotify={spotify}/>
 
             <div className="body__info">
-              
+                
+            </div>
+
+            <div className="body__songs">
+                
             </div>
         </div>
     )

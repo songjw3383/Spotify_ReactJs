@@ -15,31 +15,45 @@ function Header() {
 
     const [search, setSearch] = useState("")
     const [searchResults, setSearchResults] = useState([])
-
+    const [searchArtist, setArtist] = useState([])
+    // console.log(searchResults)
     useEffect(() => {
-        if(!search) return setSearchResults([])
+        if(!search) return setSearchResults([]), setArtist([]) // 검색 결과 없을시 초기화 하는 구간
         let cancel = false
         spotify.searchTracks(search).then(res => {
+            // console.log(res)
             if (cancel) return
             setSearchResults(res.tracks.items.map(track => {
-                const smallestAlbumImage = track.album.images.reduce(
-                    (smallest, image) => {
-                        if(image.height < smallest.height) return image
-                        return smallest
-                    }, track.album.images[0])
-                    
+                const duration = track.duration_ms;
+                //console.log(duration)
+                function milstosec(duration) { // mils to second function
+                    let minutes = Math.floor(duration / 60000);
+                    let seconds = ((duration % 60000) / 1000).toFixed(0);
+                    return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+                }
                     return {
                         artist: track.artists[0].name,
                         title: track.name,
                         uri: track.uri,
-                        albumUrl:smallestAlbumImage.url,
-                        album:track.album.name
+                        albumUrl:track.album.images[0].url,
+                        album:track.album.name,
+                        duration:milstosec(duration)
                     }
-                    
                 }))
             })
-            
-            return () => cancel = true
+        spotify.searchArtists(search).then(res => {
+            // console.log(res);
+            if (cancel) return
+            setArtist(res.artists.items.map(artist => {
+                return {
+                    artistName:artist.name,
+                    artistImg:artist.images[0]?.url,
+                    artistType:artist.type,
+                }
+            }))
+        })
+
+        return () => cancel = true
     },[search])
 
     return (
@@ -50,10 +64,8 @@ function Header() {
                 <input placeholder="Search for Artists, Songs" type="text" value={search}
                 onChange={e => setSearch(e.target.value)}></input>
 
-                <div className="header__search" style={{overflowY: "auto"}}>
-                    {searchResults.map(track => (
-                        <TrackSearchResult track={track} key={track.uri} />
-                    ))}
+                <div className="header__search">
+                    <TrackSearchResult result={searchResults} artist={searchArtist}/>
                 </div>
 
             </div>

@@ -12,7 +12,7 @@ function MyLibrary({spotify}) {
     console.log(savedTracks)
     return (
         <div className="body">
-            <Header spotify={spotify}/>
+            {/* <Header spotify={spotify}/> */}
 
             <h2>Playlists</h2>
 

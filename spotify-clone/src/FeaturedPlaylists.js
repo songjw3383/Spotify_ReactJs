@@ -9,7 +9,7 @@ function FeaturedPlaylists({spotify}) {
     console.log(featuredPlaylists);
     return (
         <div className="body">
-            <Header spotify={spotify}/>
+            {/* <Header spotify={spotify}/> */}
 
             <header className="new_header">{featuredPlaylists.message}</header>
             <div className="grid__playlists">

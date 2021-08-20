@@ -10,7 +10,7 @@ function NewReleases({spotify}) {
     // console.log(newReleases);
     return (
         <div className="body">
-            <Header spotify={spotify}/>
+            {/* <Header spotify={spotify}/> */}
 
             <header className="new_header">NEW RELEASES</header>
             <div className="grid__playlists">
