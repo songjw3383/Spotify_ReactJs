@@ -28,21 +28,15 @@
   background-color: rgb(18,18,18);
   overflow-y: auto;
   position: fixed;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   width: 80vw;
   height: 100vh;
   top: 80px;
 }
 
 .header__search::-webkit-scrollbar  {
-  width:10px;
-  background-color: rgb(91, 87, 115); 
-} 
-
-.header__search::-webkit-scrollbar-thumb {
-  background-color: rgb(179, 177, 190); 
-} 
-
+  display:none
+}
 .header__right {
   position: fixed;
   right: 40px;

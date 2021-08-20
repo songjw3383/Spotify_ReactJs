@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100%;
+    height: 210vh;
     overflow-y: auto;
     z-index: 1000;
     color: white;
@@ -20,12 +20,12 @@
 }
 
 .topResult__container {
-    border: 1px solid white;
+    /* border: 1px solid white; */
     flex: 0.4;
 }
 
 .track__container {
-    border: 1px solid white;
+    /* border: 1px solid white; */
     flex: 0.6;
 }
 
@@ -84,15 +84,15 @@
 /* MIDDLE */
 .middle__container {
     margin:2.5rem 0 1rem 0;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     display:flex;
     flex-direction: column;
-    height: 45vh;
+    height: 46vh;
 }
 
 .artist__container {
     display: flex;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     margin: 1rem 0 1rem 0;
     height: 50vh;
     overflow-x: auto;
@@ -126,7 +126,11 @@
     border-radius: 999px;
     margin-bottom: 1rem;
 }
+.artist__card.squre > img {
+    border-radius: 0px;
+}
 .artist__card > h5 {
+    margin-top: 0.4rem;
     font-weight: 400;
     text-transform: uppercase;
 }

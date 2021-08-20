@@ -16,9 +16,11 @@ function Header() {
     const [search, setSearch] = useState("")
     const [searchResults, setSearchResults] = useState([])
     const [searchArtist, setArtist] = useState([])
+    const [searchPlaylist, setPlaylist] = useState([])
+
     // console.log(searchResults)
     useEffect(() => {
-        if(!search) return setSearchResults([]), setArtist([]) // 검색 결과 없을시 초기화 하는 구간
+        if(!search) return setSearchResults([]), setArtist([]), setPlaylist([]) // 검색 결과 없을시 초기화 하는 구간
         let cancel = false
         spotify.searchTracks(search).then(res => {
             // console.log(res)
@@ -52,6 +54,27 @@ function Header() {
                 }
             }))
         })
+        spotify.searchPlaylists(search).then(res => {
+            console.log(res);
+            if (cancel) return
+            setPlaylist(res.playlists.items.map(playlist => {
+                const description = playlist?.description;
+                const replacing = description.replace(/(<([^>]+)>)/ig,""); // 문자열 내 html 태그 요소 삭제
+                function letterSlice(replacing) {
+                    if(replacing.length <50){
+                        return replacing
+                    }
+                    else if(replacing.length > 30) {
+                    let slice = replacing.substr(0,60);
+                    return slice + "..."}
+                }
+                return {
+                    playlistName:playlist.name,
+                    playlistDesc:letterSlice(replacing),
+                    playlistImage:playlist.images[0]?.url
+                }
+            }))
+        })
 
         return () => cancel = true
     },[search])
@@ -65,7 +88,10 @@ function Header() {
                 onChange={e => setSearch(e.target.value)}></input>
 
                 <div className="header__search">
-                    <TrackSearchResult result={searchResults} artist={searchArtist}/>
+                    <TrackSearchResult 
+                        result={searchResults} 
+                        artist={searchArtist}
+                        playlist={searchPlaylist}/>
                 </div>
 
             </div>

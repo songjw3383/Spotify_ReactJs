@@ -2,9 +2,10 @@ import React from 'react'
 import './TrackSearchResult.css'
 
 
-function TrackSearchResult({result, artist}) {
-    console.log(result)
+function TrackSearchResult({result, artist, playlist}) {
+    //console.log(result)
     //console.log(artist)
+    // console.log(playlist)
     return (
         <div className="result__container">
             <div className="top__container">
@@ -46,7 +47,7 @@ function TrackSearchResult({result, artist}) {
                     {artist?.map(item => (
                         <>
                         <div className="artist__card">
-                            <img src={item?.artistImg} alt="" />
+                            <img src={item.artistImg} alt="" />
                             <h4>{item.artistName}</h4>
                             <h5>{item.artistType}</h5>
                         </div>
@@ -55,14 +56,28 @@ function TrackSearchResult({result, artist}) {
                 </div>
             </div>
             <div className="middle__container">
-                <h2>아티스트</h2>
+                <h2>앨범</h2>
                 <div className="artist__container">
-                    {artist?.map(item => (
+                    {result?.map(item => (
                         <>
-                        <div className="artist__card">
-                            <img src={item?.artistImg} alt="" />
-                            <h4>{item.artistName}</h4>
-                            <h5>{item.artistType}</h5>
+                        <div className="artist__card squre">
+                            <img src={item?.albumUrl} alt="" />
+                            <h4>{item.album}</h4>
+                            <h5>{item.artist}</h5>
+                        </div>
+                        </>
+                    ))}
+                </div>
+            </div>
+            <div className="middle__container">
+                <h2>플레이리스트</h2>
+                <div className="artist__container">
+                    {playlist?.map(item => (
+                        <>
+                        <div className="artist__card squre">
+                            <img src={item?.playlistImage} alt=""/>
+                            <h4>{item?.playlistName}</h4>
+                            <h5>{item.playlistDesc}</h5>
                         </div>
                         </>
                     ))}
