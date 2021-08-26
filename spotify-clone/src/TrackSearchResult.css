@@ -7,6 +7,7 @@
     z-index: 1000;
     color: white;
     background-color: rgb(18,18,18);
+    cursor: pointer;
 }
 .result__container::-webkit-scrollbar{
     display: none;
@@ -15,7 +16,8 @@
 /* FIRST TOP */
 .top__container {
     display: flex;
-    /* 위쪽 구분선용 */
+    
+    /* border : 1px solid white; */
     min-height: 250px;;
 }
 
@@ -25,40 +27,60 @@
 }
 
 .track__container {
+    cursor: pointer;
     /* border: 1px solid white; */
     flex: 0.6;
 }
 
 .topResult__info {
+    position: relative;
     display: flex;
     flex-direction: column;
     padding: 1rem;
     margin: 1rem 1rem 1rem 0;
     height: 180px;
-    background-color: rgb(24,24,24);
     overflow-y: auto;
-}
-.topResult__info:hover {
-    background-color: rgb(40,40,40);
-    -webkit-transition: all 0.2s ease-in-out;
-}
-
-.topResult__info > div {
-    display : flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    align-items: center;
 }
 
 .topResult__info::-webkit-scrollbar {
     display: none;
 }
 
-.topResult__info > img {
+.topResult__info >  img {
     max-width: 100px;
     max-height: 100px;
     object-fit: cover;
     border-radius: 999px;
+}
+
+
+.right__content {
+    cursor: pointer;
+    position: relative;
+    display : flex;
+    justify-content: space-between;
+    background-color: rgb(24,24,24);
+    margin-bottom: 10px;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.right__content:hover {
+    background-color: rgb(40,40,40);
+    -webkit-transition: all 0.2s ease-in-out;
+}
+
+.right__content > .MuiSvgIcon-root {
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+.right__content > .MuiSvgIcon-root:hover {
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
 }
 
 .tracks__image {
@@ -69,6 +91,7 @@
     max-width: 50px;
     max-height: 50px;
 }
+
 
 .tracks__info {
     margin-left: 10px;
@@ -97,6 +120,7 @@
     height: 50vh;
     overflow-x: auto;
     overflow-y: hidden;
+    cursor: pointer;
 }
 .artist__container::-webkit-scrollbar  {
     width:3px;
@@ -112,13 +136,32 @@
   }  
 
 .artist__card {
+    position: relative;
+    box-shadow: 2px 4px 4px 1px rgba(0, 0, 0, 0.2);
     margin:0 1rem 1.5rem 0 ;
     padding: 1rem;
     background-color: rgb(24,24,24);
+    transition: all 0.2s ease-in-out;
 }
 .artist__card:hover {
     background-color: rgb(40,40,40);
     -webkit-transition: all 0.2s ease-in-out;
+}
+
+.artist__card > .MuiSvgIcon-root {
+    position:absolute;
+    top: 65%;
+    left: 80%;
+    transform: translate(-80%,-80%);
+    color: green;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+}
+
+.artist__card > .MuiSvgIcon-root:hover {
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
 }
 .artist__card > img {
     width: 180px;
@@ -126,11 +169,29 @@
     border-radius: 999px;
     margin-bottom: 1rem;
 }
-.artist__card.squre > img {
-    border-radius: 0px;
-}
 .artist__card > h5 {
     margin-top: 0.4rem;
     font-weight: 400;
     text-transform: uppercase;
+}
+
+.artist__card.squre > img {
+    border-radius: 0px;
+}
+
+.artist__card.squre > .MuiSvgIcon-root {
+    position:absolute;
+    top: 60%;
+    left: 85%;
+    transform: translate(-80%,-80%);
+    color: green;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.artist__card.squre > .MuiSvgIcon-root:hover {
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
 }

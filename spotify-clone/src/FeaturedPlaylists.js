@@ -3,6 +3,7 @@ import "./Body.css";
 import { useDataLayerValue } from './DataLayer';
 import Header from "./Header";
 import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
+import MainHeader from './MainHeader';
 
 function FeaturedPlaylists({spotify}) {
     const [{ featuredPlaylists }, dispatch] = useDataLayerValue();
@@ -10,7 +11,7 @@ function FeaturedPlaylists({spotify}) {
     return (
         <div className="body">
             {/* <Header spotify={spotify}/> */}
-
+            <MainHeader />
             <header className="new_header">{featuredPlaylists.message}</header>
             <div className="grid__playlists">
                 {featuredPlaylists?.playlists.items.map(item => (

@@ -4,6 +4,7 @@ import "./Body.css";
 import { useDataLayerValue } from './DataLayer';
 import Header from "./Header";
 import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
+import MainHeader from "./MainHeader";
 
 function NewReleases({spotify}) {
     const [{ newReleases }, dispatch] = useDataLayerValue();
@@ -11,6 +12,7 @@ function NewReleases({spotify}) {
     return (
         <div className="body">
             {/* <Header spotify={spotify}/> */}
+            <MainHeader />
 
             <header className="new_header">NEW RELEASES</header>
             <div className="grid__playlists">

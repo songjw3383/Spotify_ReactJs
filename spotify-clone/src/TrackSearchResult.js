@@ -1,7 +1,7 @@
 import React from 'react'
 import './TrackSearchResult.css'
-
-
+import PlayArrowIcon from '@material-ui/icons/PlayArrow';
+import PlayCircleFilledWhiteIcon from '@material-ui/icons/PlayCircleFilledWhite';
 function TrackSearchResult({result, artist, playlist}) {
     //console.log(result)
     //console.log(artist)
@@ -24,20 +24,22 @@ function TrackSearchResult({result, artist, playlist}) {
                     <div className="topResult__info">
                         {result?.map(item => (
                             <>
-                                <div>
-                                    <div className="tracks__image">
-                                        <img src={item?.albumUrl} alt="" />
-                                        <div className="tracks__info">
-                                            <h4 className="tracks__title">{item?.title}</h4>
-                                            <h5 className="tracks__artist">{item?.artist}</h5>
+                                    <div className="right__content">
+                                        <PlayArrowIcon/>
+                                        <div className="tracks__image">
+                                            <img src={item?.albumUrl} alt="" />
+                                            <div className="tracks__info">
+                                                <h4 className="tracks__title">{item?.title}</h4>
+                                                <h5 className="tracks__artist">{item?.artist}</h5>
+                                            </div>
+                                        </div>
+                                        <div className="tracks__duration">
+                                            <h5 className="tracks__duration" >{item?.duration}</h5>
                                         </div>
                                     </div>
-                                    <div className="tracks__duration">
-                                        <h5 className="tracks__duration" >{item?.duration}</h5>
-                                    </div>
-                                </div>
                             </>
                         ))}
+                        
                     </div>
                 </div>
             </div>
@@ -47,6 +49,7 @@ function TrackSearchResult({result, artist, playlist}) {
                     {artist?.map(item => (
                         <>
                         <div className="artist__card">
+                            <PlayCircleFilledWhiteIcon  />
                             <img src={item.artistImg} alt="" />
                             <h4>{item.artistName}</h4>
                             <h5>{item.artistType}</h5>
@@ -61,6 +64,7 @@ function TrackSearchResult({result, artist, playlist}) {
                     {result?.map(item => (
                         <>
                         <div className="artist__card squre">
+                        <PlayCircleFilledWhiteIcon  />
                             <img src={item?.albumUrl} alt="" />
                             <h4>{item.album}</h4>
                             <h5>{item.artist}</h5>

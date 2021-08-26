@@ -5,6 +5,7 @@ import { useDataLayerValue } from './DataLayer';
 import Header from "./Header";
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import SongRow from './SongRow'
+import MainHeader from "./MainHeader";
 
 function MyLibrary({spotify}) {
     const [{ topArtists,topTracks,playlists,savedTracks }, dispatch] = useDataLayerValue();
@@ -13,7 +14,7 @@ function MyLibrary({spotify}) {
     return (
         <div className="body">
             {/* <Header spotify={spotify}/> */}
-
+            <MainHeader />
             <h2>Playlists</h2>
 
             <div className="artist__grid playlist_scrollbar">

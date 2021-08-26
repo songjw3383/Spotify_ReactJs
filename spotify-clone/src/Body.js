@@ -3,6 +3,7 @@ import React from 'react'
 import "./Body.css";
 import { useDataLayerValue } from './DataLayer';
 import Header from "./Header";
+import MainHeader from "./MainHeader";
 import SongRow from './SongRow'
 
 function Body({spotify}) {
@@ -12,7 +13,7 @@ function Body({spotify}) {
     return (
         <div className="body">
             {/* <Header spotify={spotify}/> */}
-
+            <MainHeader />
             <div className="body__info">
                 <img src={currentPlaylists?.items[0].track.album.images[0].url} alt="" />
                 <div className="body__infoText">

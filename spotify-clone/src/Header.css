@@ -5,6 +5,7 @@
   justify-content: space-between;
   z-index: 1000;
   margin-bottom: 5rem;
+  
 }
 
 .header__left {
@@ -31,7 +32,7 @@
   /* border: 1px solid white; */
   width: 80vw;
   height: 100vh;
-  top: 80px;
+  top: 100px;
 }
 
 .header__search::-webkit-scrollbar  {
