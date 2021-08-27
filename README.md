@@ -35,10 +35,10 @@
 
 ## 상세 페이지
 ### - 메인 페이지
-![spotify_main](https://user-images.githubusercontent.com/56250064/128592943-9312d6bb-13ca-42bf-8ce9-01ab617e3af6.png)
+![spotify_main](https://user-images.githubusercontent.com/56250064/131148076-6b03f5c2-b059-4373-a73a-ae8036f7966f.png)
 
 ### - 부가페이지 (NewRelease & Editor's pick Page)
-<img src="https://user-images.githubusercontent.com/56250064/128593087-ffcf322c-0d3c-47a6-9bf8-952761780388.png" width="50%"><img src="https://user-images.githubusercontent.com/56250064/128593089-bbc5e1d2-21b3-437c-a520-e54f4dd2a3d6.png" width="50%">
+<img src="https://user-images.githubusercontent.com/56250064/131148221-9ee37538-6426-4cde-a5ce-31b7edf871f0.png" width="50%"><img src="https://user-images.githubusercontent.com/56250064/131148279-9fcf7ca1-927d-4479-8bcd-3bbf61cff660.png" width="50%">
 
 ### - 마이라이브러리
-![spotify_mylibrary](https://user-images.githubusercontent.com/56250064/129579788-513f28ba-3dbd-47b0-9977-667da8e7bdd0.png)
+![spotify_mylibrary](https://user-images.githubusercontent.com/56250064/131148156-7de2ac7f-77ab-42e7-b5fd-c811a5d3da92.png)
