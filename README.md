@@ -21,8 +21,9 @@
 
 ## 사용기술
 1. ReactJs
-2. CSS
-3. Material-UI ( For Icons )
+2. HTML
+3. CSS
+4. Material-UI ( For Icons )
 
 <hr/>
 
