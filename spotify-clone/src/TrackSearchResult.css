@@ -150,9 +150,9 @@
 
 .artist__card > .MuiSvgIcon-root {
     position:absolute;
-    top: 65%;
+    top: 55%;
     left: 80%;
-    transform: translate(-80%,-80%);
+    transform: translate(-80%,-55%);
     color: green;
     width: 50px;
     height: 50px;
