@@ -2,7 +2,7 @@
 ## 목적
 음악 플랫폼인 Spotify의 API를 활용하여 반응형 웹사이트 및 UI 개발.
 
-또한 단일 페이지 어플리케이션 (Single Page Application)을 구성하기 위해 react-router-dom 을 사용하여 구축
+또한 단일 페이지 어플리케이션(Single Page Application)을 구성하기 위해 react-router-dom 을 사용하여 구축
 
 - **기간** :
 07.08 ~ 
@@ -10,7 +10,7 @@
 - **개발인원** :
 1 명
 
-- **페이지 구성 (flow chart)** 
+- **페이지 구성 (flow chart) (진행 중)** 
 <img src="https://user-images.githubusercontent.com/56250064/128592719-9cabbf66-3dae-445c-9e73-f3f930416cc6.png" witdh="400" height="300">
 
 
@@ -42,3 +42,6 @@
 
 ### - 마이라이브러리
 ![spotify_mylibrary](https://user-images.githubusercontent.com/56250064/131148156-7de2ac7f-77ab-42e7-b5fd-c811a5d3da92.png)
+
+### - 검색 (Search page)
+![Search](https://user-images.githubusercontent.com/56250064/131149658-67da637c-03b2-4aa8-bdbd-ebf7daf70d8b.gif)
