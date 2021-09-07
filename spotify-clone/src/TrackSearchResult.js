@@ -79,6 +79,7 @@ function TrackSearchResult({result, artist, playlist}) {
                     {playlist?.map(item => (
                         <>
                         <div className="artist__card squre">
+                            <PlayCircleFilledWhiteIcon  />
                             <img src={item?.playlistImage} alt=""/>
                             <h4>{item?.playlistName}</h4>
                             <h5>{item.playlistDesc}</h5>
