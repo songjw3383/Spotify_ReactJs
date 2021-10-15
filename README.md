@@ -1,4 +1,4 @@
-# Spotify-Clone (진행 중)
+# Spotify-Clone
 ## 목적
 음악 플랫폼인 Spotify의 API를 활용하여 반응형 웹사이트 및 UI 개발.
 
